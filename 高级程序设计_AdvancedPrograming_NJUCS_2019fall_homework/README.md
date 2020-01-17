@@ -4,7 +4,7 @@
 
 高程很有意思的 :smile:
 
-*有趣的课设一和课程二:*
+*有趣的课设一课程二和课设三:*
 
 ![1574127542525](./assets/1574127542525.png)
 
@@ -14,10 +14,8 @@
 
 ![](./assets/doing.gif)
 
-
-
-接下来还会上传上机测试, 以及接下来的课设, 加油!!!
+![](./assets/keshe3.png)
 
 
 
-star :night_with_stars:
+:night_with_stars:
