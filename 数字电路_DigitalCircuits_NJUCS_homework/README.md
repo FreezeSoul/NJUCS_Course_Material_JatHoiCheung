@@ -2,8 +2,6 @@
 
 ---
 
-加油!!! 更新中..
-
 :slightly_smiling_face:
 
 

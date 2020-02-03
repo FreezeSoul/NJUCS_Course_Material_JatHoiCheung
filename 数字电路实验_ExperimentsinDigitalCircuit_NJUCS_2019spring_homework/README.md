@@ -6,8 +6,6 @@
 
 sco:97
 
-:slightly_smiling_face:
-
 
 
 star :night_with_stars:

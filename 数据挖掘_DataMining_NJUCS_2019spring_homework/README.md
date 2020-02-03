@@ -6,6 +6,8 @@
 
 没有Transformer, 就是简单的`word2vec` + `LSTM`, `tf-idf` + 机器学习的方法似乎效果更不好.
 
+每年大作业题目可能有**差别**.
+
 sco:90
 
 

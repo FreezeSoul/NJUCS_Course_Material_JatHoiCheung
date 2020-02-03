@@ -2,10 +2,6 @@
 
 ---
 
-加油!!! 更新中..
-
-:laughing:
-
-
+多刷题, 有很多往年卷.
 
 star :night_with_stars:
