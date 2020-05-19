@@ -12,7 +12,7 @@
 
 加油! **更新中..**
 
-如果只需要下载*子文件夹*请戳[DownGit](https://minhaskamal.github.io/DownGit/#/home)
+如果只需要下载*子文件夹*请戳[DownGit](https://yehonal.github.io/DownGit/#/home)
 
 
 
