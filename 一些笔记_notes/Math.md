@@ -340,11 +340,15 @@ $\star$ 讨论两种方程组情况:
 
   记忆: 被一个比自己弱小的(数量严格更少的)线性表出, 那么自己线性相关.
 
+
+
 + ![image-20200525181558593](assets/image-20200525181558593.png)
 
 + ![image-20200525181712802](assets/image-20200525181712802.png)
 
   证明: 因为可以被单位向量线性表出.
+
+
 
 + ![image-20200525181748351](assets/image-20200525181748351.png)
 
@@ -353,10 +357,8 @@ $\star$ 讨论两种方程组情况:
 + 一向量组的部分组 极大线性无关组: 如果这个部分组本身是线性无关的, 并且从这向量组中任意添加一个组内其他向量, 所得的部分组都线性相关. (有点像基的概念: 任意组内其他向量都可以被极大线性无关组表出, 所以有:
 + 任意一个极大线性无关组都与向量组本身等价.
 + 极大线性无关组不唯一.
-
 + 一向量组的极大线性无关组都含有相同个数的向量.
 + 向量组的秩: 向量组的极大线性无关组所含向量的个数.
-
 + 一向量组线性无关 $\Leftrightarrow$ 秩与所含向量的个数相同.
 + 任一个线性无关的部分向量组都能扩充成一个极大线性无关组.
 + 全部由零向量组成的向量组没有极大线性无关组, 秩为零.
@@ -396,6 +398,7 @@ $\star$ 讨论两种方程组情况:
 + 最大的 不为零的$r$级所在行列都是极大线性无关组.
 
 + 计算矩阵的秩:
+  
   + 初等行变换 化成阶梯形
 
 
@@ -414,6 +417,9 @@ $\star$ 讨论两种方程组情况:
 
   + 必要性: 看上面的(3), 说明向量组 $\boldsymbol{\beta_i}$ 可以被 $\boldsymbol{\alpha_i}$ 表出, 所以有:![image-20200525230303935](assets/image-20200525230303935.png)
   + 充分性: 找极大线性无关组, 这个极大线性无关组放到含有 $\boldsymbol{\beta}$ 的组中也是一个极大线性无关组(因为 $\boldsymbol{\beta}$ 加到这个极大线性无关组里面不可能和他们线性无关, 不然秩就更大了), 所以$\boldsymbol{\beta}$可以被线性表出. 所以有解.
+
+
+
 
 + 本质就是出现阶梯形这样(如下)之后会无解:
 
@@ -478,7 +484,6 @@ $\star$ 讨论两种方程组情况:
   \boldsymbol{\gamma}=\gamma_{0}+k_{1} \eta_{1}+k_{2} \eta_{2}+\cdots+k_{n-}, \eta_{n-r}
   $$
   
-
 + 方程组有解时, 解唯一 $\Leftrightarrow$ 它的导出组只有零解.
 
 
@@ -503,6 +508,8 @@ $\star$ 讨论两种方程组情况:
 
 + $|AB| = |A| \ |B|$.
 + $A$ 非退化的: $|A| \neq 0$.
+
+
 
 + $A \in \mathbb{R}^{n \times m}, B \in \mathbb{R}^{m \times s}$, 则
   $$
@@ -537,7 +544,7 @@ $\star$ 讨论两种方程组情况:
   $$
   
 
-  
+
 
 + $(\boldsymbol A')^{-1} = (\boldsymbol A^{-1})'$
 
@@ -576,6 +583,9 @@ $\star$ 讨论两种方程组情况:
     
 
   + 引理: 对一个$s \times n$的矩阵$\boldsymbol A$作一初等行变换 $\Leftrightarrow$ $\boldsymbol A$ 左乘相应的$s \times s$的初等矩阵. 同理列变换等价于右乘.
+
+
+
 
 + $\boldsymbol A$ 和 $\boldsymbol B$ 等价, 如果$\boldsymbol B$ 可以由 $\boldsymbol A$ 经过一系列初等变换得到.
 
@@ -631,7 +641,7 @@ $\star$ 讨论两种方程组情况:
 
 ### § 1 二次型基础
 
-+ 定义:
++ 二次型定义:
 
   ![image-20200526110246900](assets/image-20200526110246900.png)
 
@@ -655,23 +665,447 @@ $\star$ 讨论两种方程组情况:
 
   ![image-20200526110625665](assets/image-20200526110625665.png)
 
+
+
++ 作非线性替换: $\boldsymbol X = \boldsymbol C \boldsymbol Y$, 我们有:
+  $$
+  \boldsymbol X' \boldsymbol A \boldsymbol X = (\boldsymbol C \boldsymbol Y)' \boldsymbol A (\boldsymbol C \boldsymbol Y) = \boldsymbol Y' (\boldsymbol C' \boldsymbol A \boldsymbol C) \boldsymbol Y = \boldsymbol Y' \boldsymbol B \boldsymbol Y
+  $$
+  
++ $\star$ $\boldsymbol A, \boldsymbol B$ 合同: $\boldsymbol B = \boldsymbol C' \boldsymbol A \boldsymbol C$, 其中$\boldsymbol C$是可逆的(因为是非退化的线性变换).
+
+  合同关系具有 自反 对称 传递.
+
+
+
+### § 2 标准形
+
++ 标准形: 只包含平方项的二次型:
+
+  ![image-20200526185659871](assets/image-20200526185659871.png)
+
++ 数域$P$上任意一个二次型都可以经过非退化的线性替换变成标准形.
+
+  证明: "配方法" + 归纳法.
+
++ 标准形的矩阵是对角阵.
+
+
+
++ 数域$P$上任意一个对称阵都合同于一对角阵. (同上, 也就是非退化线性变换化成标准形)
+
+**如何化标准形?**
+
+
+
+### § 3 唯一性
+
+一个二次型的标准形 秩 是唯一的, 与所作的非退化线性替换 无关.
+
++ 标准形中的系数不是唯一确定的, 与所作的非退化线性替换 有关:![image-20200526200244004](assets/image-20200526200244004.png)
+
+  ![image-20200526200257701](assets/image-20200526200257701.png)
+
+
+
++ 复系数的二次型 的规范形:
+
+  ![image-20200526200533353](assets/image-20200526200533353.png)
+
+  规范形完全被原二次型矩阵的秩所决定.
+
++ 任意一个复系数二次型, 经过适当的非线性替换可以变成规范形, 并且规范形唯一.
+  + 任一复数对称阵 合同于 对角线全是1或0的对角阵.
+  + 两个复数对称阵合同 $\Leftrightarrow$ 它们的秩相等.
+
+
+
++ 同理, 实系数二次型 的规范形:
+
+  ![image-20200526201007739](assets/image-20200526201007739.png)
+
+  完全由 正惯性指数和负惯性指数 决定.
+
+
+
++ $\star \ \star$ 惯性定理: 任意一个实数域上的二次型, 经过一适当的非退化线性替换可以变成规范形, 并且规范形是唯一的.
+
+  证明: 
+
+  1. 经过非退化线性替换: $\boldsymbol X = \boldsymbol B \boldsymbol Y$, $\boldsymbol X = \boldsymbol C \boldsymbol Z$. 化成规范形:
+
+     1. $f\left(x_{1}, x_{2}, \cdots, x_{n}\right)=y_{1}^{2}+\cdots+y_{p}^{2}-y_{p+1}^{2}-\cdots-y_{r}^{2}$
+     2. $f\left(x_{1}, x_{2}, \cdots, x_{n}\right)=z_{1}^{2}+\cdots+z_{q}^{2}-z_{q+1}^{2}-\cdots-z_{r}^{2}$
+
+     
+
+  2. 下面来证 $p = q$
+
+     我们有 $\boldsymbol Z = \boldsymbol C^{-1} \boldsymbol B \boldsymbol Y$, 
+
+     ![image-20200527081559587](assets/image-20200527081559587.png)
+
+     + 反证法, 假设$p > q$, 注意以下为#式:
+       $$
+       y_{1}^{2}+\cdots+y_{p}^{2}-y_{p+1}^{2}-\cdots-y_{r}^{2} = z_{1}^{2}+\cdots+z_{q}^{2}-z_{q+1}^{2}-\cdots-z_{r}^{2}
+       $$
+       
+
+       考虑齐次线性方程组:
+       $$
+       \left\{\begin{array}{l}
+       z_1 = g_{11} y_{1}+g_{12} y_{2}+\cdots+g_{1 n} y_{n}=0 \\
+       \cdots \cdots \cdots \cdots \\
+       z_q = g_{q 1} y_{1}+g_{q 2} y_{2}+\cdots+g_{q n} y_{n}=0 \\
+       y_{p+1}=0 \\
+       \cdots \cdots \cdots \cdots \\
+       y_{n}=0
+       \end{array}\right.
+       $$
+       由假设 $q + (n - p) < n$, 有非零解, 不妨设解为$y_i = k_i$:
+
+       有 $k_{p+ 1} = \cdots = k_n = 0$
+
+       + 代入#式左端: $y_{1}^{2}+\cdots+y_{p}^{2} > 0$ (因为有非零解)
+       + 代入#式右端: $-z_{q+1}^{2}-\cdots-z_{r}^{2} \leq 0$ (因为前面的$z_i$全部为零)
+
+       矛盾. 反之亦然.
+
+
+
++ $\star \ \star$ 正负惯性指数, 符号差:
+
+  实二次型的规范形中, 正平方项的个数 $p$ 称为正惯性指数, 负平方项的个数 $r - p$ 称为负惯性指数. 它们的差 $p - (r - p) = 2p - r$ 称为符号差.
+
+  + 实二次型标准形 中系数为正的平方项的个数 唯一确定, 等于正惯性指数.
+
+  
+
++ 总结如下:
+
+  ![image-20200527083724537](assets/image-20200527083724537.png)
+
+  ![image-20200527083738943](assets/image-20200527083738943.png)
+
+  
+
+  
+
+### § 4 正定二次型
+
++ 正定二次型定义: 如果对于任意一组**不全为零的**实数 $x_1, x_2, \cdots , x_n$ 都有 $f(x_1, x_2, \cdots , x_n) > 0$.
+  + [例] $f\left(x_{1}, x_{2}, \cdots, x_{n}\right)=x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}$ 是正定的, 因为只有$x_i$全为零时 它才等于零, 其余情况都大于零.
+
++ 实二次型正定的充要条件:
+  $$
+  f\left(x_{1}, x_{2}, \cdots, x_{n}\right)=d_1 x_{1}^{2}+d_2 x_{2}^{2}+\cdots+d_n x_{n}^{2}
+  $$
+  是正定的 当且仅当 $d_i > 0, \ \forall i, \ i = 1, 2, \cdots , n$ 注意这里必须要所有的$i$, 意味着必须要$n$个$x_i^2$都在.
+
+
+
++ 非退化线性替换保持正定性不变, 所以干脆就变成规范形:
+
++ $n$元实二次型是正定 的充分必要条件 是它的正惯性指数等于$n$
+
+  证明思路: 标准形每一项系数大于零.
+
+
+
++ 正定二次型规范形 就是系数都为1 的二次型, 而且每一项都要有.
+
+
+
++ 实对称矩阵$\boldsymbol A$的正定:
+
+  如果二次型 $\boldsymbol X' \boldsymbol A \boldsymbol X$ 正定.
+
++ 实对称矩阵$\boldsymbol A$正定的充要条件:
+
+  与单位矩阵$\boldsymbol E$合同.
+
+  + 正定矩阵的行列式大于零.
+
+    证明: $\boldsymbol A$ 是正定矩阵:
+    $$
+    \boldsymbol A = \boldsymbol C' \boldsymbol E \boldsymbol C = \boldsymbol C' \boldsymbol C
+    $$
+    $\boldsymbol C$ 可逆, 两边取行列式即可.
+
+
+
++ 顺序主子式:
+
+  ![image-20200527092507156](assets/image-20200527092507156.png)
+
++ 实对称矩阵$\boldsymbol A$正定的充要条件(用来判别):
+
+  $\boldsymbol A$ 的顺序主子式全大于零. (证明未看)
+
+
+
++ 类似地有 负定, 半正定, 半负定: $f(x_1, x_2, \cdots , x_n) < 0, \dots$; 不定的: 既不是半正定又不是半负定 等定义.
+
+
+
++ $\star \ \star$ 实二次型 $f(x_1, \cdots , x_n) = \boldsymbol X' \boldsymbol A \boldsymbol X$, $\boldsymbol A$ 是实对称的, 下列条件等价:
+  1. $f(x_1, \cdots , x_n)$是半正定的
+  2. 正惯性指数 等于 秩
+  3. 存在可逆矩阵$\boldsymbol C$, 使 $\boldsymbol C' \boldsymbol A \boldsymbol C$ 是对角阵, 且对角线上的元素 $\geq 0$
+  4. $\star$ 存在实矩阵 $\boldsymbol C$, 使 $\boldsymbol A = \boldsymbol C' \boldsymbol C$
+  5. $\boldsymbol A$ 的所有主子式(行指标与列指标相同的子式) 都 $\geq 0$
+
+
+
+## 第六章 线性空间
+
+### § 1 集合 $\cdot$ 映射
+
++ 两个集合含有完全相同的元素, 即$a \in M$当且仅当$a\in N$, 那么称为集合相等.
+
+
+
++ 集合$M$到集合$M'$的一个映射: 它使$M$中每一个元素$a$都有$M'$中一个确定的元素$a'$与之对应.
+
+  记为 $\sigma(a) = a'$, 其中$a'$称为在映射下的像, $a$称为映射下的原像.
+
++ 恒等映射/单位映射: $\sigma(a) = a$, 映射到自身.
+
+复习屈书离散, 关于单射, 双射, 满射等.
+
+
+
+### § 2 线性空间的定义与简单性质
+
+定义: $V$ 是数域 $P$ 上的线性空间:
+
+$V$是非空集合, $P$是一个数域.
+
++ 在V的元素之间定义了一种代数运算: 加法 \Rightarrow 对于V中任意两个元素 $\boldsymbol \alpha$ 和 $\boldsymbol \beta$ 在$V$中都有唯一的一个元素 $\boldsymbol \gamma$ 与之对应. 记为 $\boldsymbol \gamma = \boldsymbol \alpha + \boldsymbol \beta$
+
+  ![image-20200527103159325](assets/image-20200527103159325.png)
+
++ 如果加法和数量乘法满足:
+
+  + 加法:
+
+    1. 交换律: $\boldsymbol \alpha + \boldsymbol \beta = \boldsymbol \beta + \boldsymbol \alpha$
+    2. 结合律: $(\boldsymbol \alpha + \boldsymbol \beta) + \boldsymbol \gamma = \boldsymbol \alpha + (\boldsymbol \beta + \boldsymbol \gamma)$
+    3. 零元存在: $\exist \ \boldsymbol 0 \in V, \ \forall \boldsymbol \alpha \in V, \ \boldsymbol 0 + \boldsymbol \alpha = \boldsymbol \alpha$
+    4. 负元存在: $\forall \ \boldsymbol \alpha \in V, \ \exist \ \boldsymbol \beta \in V, \ \boldsymbol \alpha + \boldsymbol \beta = \boldsymbol 0$
+
+    
+
+  + 数量乘法:
+
+    1. 零元存在: $1 \boldsymbol \alpha = \boldsymbol \alpha$
+    2. $k (l \boldsymbol \alpha) = (kl) \boldsymbol \alpha$
+
+    
+
+  + 数量乘法和加法满足:
+
+    1. 分配律(对常数): $(k + l) \boldsymbol \alpha = k \boldsymbol \alpha + l \boldsymbol \alpha$
+    2. 分配率(对$V$中元素): $k ( \boldsymbol \alpha + \boldsymbol \beta) = k \boldsymbol \alpha + k \boldsymbol \beta$
+
+  
+
++ 线性空间也称向量空间
+
+
+
+线性空间性质:
+
+1. 零元唯一.
+
+   证明: 反证法假设两个零元.
+
+2. 负元唯一.
+
+   证明: 反证法假设两个负元, 用其中一个负元去加零元(代换).
+
+   + $\boldsymbol \alpha$ 的负元记为 $ - \boldsymbol \alpha$
+
+     利用负元可以定义减法.
+
+3. $0 \ \boldsymbol \alpha = \boldsymbol 0, \ k \ \boldsymbol 0 = \boldsymbol 0, \ (-1) \boldsymbol \alpha = - \boldsymbol \alpha$
+
+   注意零向量 $\boldsymbol 0$, 和常数$0$
+
+4. 如果$k \boldsymbol \alpha = \boldsymbol 0$, 那么$k = 0$或者$\boldsymbol \alpha = 0$.
+
+
+
+
+
+### § 3 维数 $\cdot$ 基与坐标
+
+线性组合 线性表出 定义:
+
++ 设$V$是数域$P$上的一个线性空间, $\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_r$ 是$V$中一组向量, $k_1, k_2, \cdots , k_r$ 是数域$P$中的数, 那么
+  $$
+  \boldsymbol \alpha = k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 + \cdots + k_r \boldsymbol \alpha
+  $$
+  称为向量组 $\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_r$ 的一个线性组合. 此时也说向量 $\boldsymbol \alpha$ 可以用向量组 $\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_r$ 线性表出.
+
+  
+
++ 线性相关, 线性无关, 都与之前类似:
+
+  ![image-20200527112030235](assets/image-20200527112030235.png)
+
+
+
++ 线性相关的充要条件是其中有一个向量是其余向量的线性组合.
++ 之前重要定理: 如果向量组$\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_r$线性无关, 并且可以被$\boldsymbol \beta_1, \ \boldsymbol \beta_1 , \cdots , \boldsymbol \beta_s$线性表出, 那么$r \leq s$.
++ $\star$ 如果 $\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_r$ 线性无关, 但 $\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_r, \boldsymbol \beta$ 线性相关, 那么$\boldsymbol \beta$可以被 $\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_r$ 线性表出, 而且表法是唯一的.
+
+
+
++ 线性空间的维度:![image-20200527112625811](assets/image-20200527112625811.png)
+
+  维度就是线性空间中最大的线性无关的向量数.
+
+
+
++ $\star$ 线性空间的一组基:
+
+  ![image-20200527112845187](assets/image-20200527112845187.png)
+
+  任一向量都可以被基线性表出.
+
+反过来:
+
++ 如果线性空间$V$中有$n$个线性无关的向量$\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_n$, 并且$V$中任一向量都可以用它们线性表出, 那么: $V$ 是$n$维的, 而 $\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_n$ 就是$V$的一组基.
+
+  证明: $\star \ \star$ 就是前面重要定理的应用:
+
+  + 首先$V$的维数至少是$n$.
+  + 其次$n+1$个向量比线性相关, 反证法: 设 $\boldsymbol \beta_1, \ \boldsymbol \beta_2 , \cdots , \boldsymbol \beta_{n + 1}$ 线性无关, 又可以被 $\boldsymbol \alpha_1, \ \boldsymbol \alpha_2 , \cdots , \boldsymbol \alpha_n$ 线性表出, 由定理有 $n+1 \leq n$, 矛盾.
+
+  
+
+  [例] ![image-20200527113604256](assets/image-20200527113604256.png)![image-20200527113644135](assets/image-20200527113644135.png)
+
+  
+
   
 
 
 
+### § 4 基变换与坐标变换
+
+随着基的改变, 向量的坐标是怎么变化的.
+
+![image-20200527113935853](assets/image-20200527113935853.png)
+
+现在就是要找到 $(x_1, x_2, \cdots , x_n)$ 与 $(x_1', x_2', \cdots , x_n')$. 使用矩阵表达:
+$$
+\xi=\left(\varepsilon_{1}, \varepsilon_{2}, \cdots, \varepsilon_{n}\right)\left(\begin{array}{c}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n}
+\end{array}\right)
+$$
+
+
++ $\star \ \star$ 过渡矩阵: 两组基之间的变换 (根据上面(1)式):
+
+  ![image-20200527114650854](assets/image-20200527114650854.png) ![image-20200527120058033](assets/image-20200527120058033.png)
+
+  由向量 $\boldsymbol \varepsilon_1', \boldsymbol \varepsilon_2', \cdots , \boldsymbol \varepsilon_n'$ 的线性无关性, 可以推出过渡矩阵可逆.
+
+  
+
++ ![image-20200527121040018](assets/image-20200527121040018.png)
+
++ ![image-20200527121050611](assets/image-20200527121050611.png)
+
++ ![image-20200527121103133](assets/image-20200527121103133.png)
+
+
+
+上面基变换((4)式), 代入:![image-20200527121225142](assets/image-20200527121225142.png)
+
+对比: $\xi=\left(\varepsilon_{1}, \varepsilon_{2}, \cdots, \varepsilon_{n}\right)\left(\begin{array}{c} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{array}\right)$
+
+由基向量的线性无关性, 我们有: ![image-20200527121504349](assets/image-20200527121504349.png)
 
 
 
 
 
-
-## FAQ
-
+### § 5 线性子空间
 
 
 
 
-## FAQ
+
+## 第七章 线性变换
+
+### § 1 线性变换的定义
+
++ 线性空间$V$的一个变换$\mathscr{A}$称为线性变换: 如果对于$V$中任意的元素$\boldsymbol \alpha, \boldsymbol \beta$和数域$P$中任意数$k$, 都有:
+  $$
+  \mathscr A (\boldsymbol \alpha + \boldsymbol \beta) = \mathscr A (\boldsymbol \alpha) + \mathscr A ( \boldsymbol \beta ) \\
+  \mathscr A (k \boldsymbol \alpha) = k \mathscr A (\boldsymbol \alpha)
+  $$
+  线性变换保持向量的加法与数量乘法.
+
+  可以用来证明是不是线性变换.
+
+![image-20200527163048990](assets/image-20200527163048990.png)
+
+
+
+线性变换有以下简单的性质:
+
+![image-20200527163140963](assets/image-20200527163140963.png)![image-20200527163235128](assets/image-20200527163235128.png)![image-20200527163401362](assets/image-20200527163401362.png)
+
+
+
+
+
+### § 2 线性变换的运算
+
++ 线性变换的乘积也是也是线性变换. 线性变换的乘法适合结合律.
+
+  ![image-20200527164101821](assets/image-20200527164101821.png)
+
+  
+
++ 线性变换的和还是线性变换:
+
+  ![image-20200527164247235](assets/image-20200527164247235.png)![image-20200527164309624](assets/image-20200527164309624.png)
+
+  
+
++ 分配律:
+
+  ![image-20200527164409661](assets/image-20200527164409661.png)
+
+  
+
++ 线性变换的数量乘法:
+
+  ![image-20200527171342637](assets/image-20200527171342637.png)
+
+  
+
++ 线性变换的逆:
+
+  ![image-20200527171251835](assets/image-20200527171251835.png)
+
+  
+
++ 线性变换的幂:
+
+  ![image-20200527171454693](assets/image-20200527171454693.png)
+
+  
+
+
 
 + 导数存在蕴含导数连续?
 
@@ -696,3 +1130,20 @@ $\star$ 讨论两种方程组情况:
   知乎讲得很好.
 
 注意上面两问中$x^2 sin(\frac{1}{x})$扮演重要角色.
+
+
+
++ [例]
+  $$
+  x(y, z), \ y(x, z), \ z(y, z) \\ f(x, y, z) = 0 \\ proof. \ \ x_y \ y_z \ z_x = -1
+  $$
+  解:
+
+  ![image-20200527210452587](assets/image-20200527210452587.png)
+
+  对$f(x, y, z) = 0$两边微分:
+  $$
+  df = f_x \ dx + f_y \ dy + f_z \ dz \\ = (f_x x_y dy + f_x x_z dz) + f_y \ dy + f_z \ dz \\
+  = (f_x x_y + f_y)dy + (f_xx_z + f_z) dz
+  $$
+  
