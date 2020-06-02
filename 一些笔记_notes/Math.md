@@ -1103,7 +1103,166 @@ $$
 
   ![image-20200527171454693](assets/image-20200527171454693.png)
 
+
+
+### § 3 线性变换的矩阵
+
++ ![image-20200602150458567](assets/image-20200602150458567.png)
+
+  所以如果两个线性变换在 一组基 上的作用相同: $\mathscr{A} (\varepsilon_i) = \mathscr{B} (\varepsilon_i), \quad \forall i$, 那么有 $\mathscr{A} = \mathscr{B}$
+
   
+
++ ![image-20200602151703211](assets/image-20200602151703211.png)
+
+  证明:
+  $$
+  \xi=\sum_{i=1}^{n} x_{i} \varepsilon_{i} \\
+  \mathscr A \xi = \sum_{i = 1}^n x_i \alpha_i
+  $$
+  然后证明上述构造的 $\mathscr A$ 是一个线性变换即可.
+
+由上两点:
+
++ ![image-20200602152137164](assets/image-20200602152137164.png)
+
+  所以我们可以有:
+
++ 设 $\varepsilon_1, \varepsilon_2, \cdots , \varepsilon_n$ 是线性空间 $V$ 的一组基, $\mathscr A$ 是一个线性变换, 基向量的像可以被基线性表出:
+  $$
+  \left\{\begin{array}{c}
+  \mathscr A \boldsymbol{\varepsilon}_{1}=a_{11} \boldsymbol{\varepsilon}_{1}+a_{21} \boldsymbol{\varepsilon}_{2}+\cdots+a_{n 1} \boldsymbol{\varepsilon}_{n} \\
+  \mathscr{A} \boldsymbol{\varepsilon}_{2}=a_{12} \boldsymbol{\varepsilon}_{1}+a_{22} \boldsymbol{\varepsilon}_{2}+\cdots+a_{n 2} \boldsymbol{\varepsilon}_{n} \\
+  \ldots \ldots \ldots . . \\
+  \mathscr{A} \boldsymbol{\varepsilon}_{n}=a_{1 n} \boldsymbol{\varepsilon}_{1}+a_{2 n} \boldsymbol{\varepsilon}_{2}+\cdots+a_{n n} \boldsymbol{\varepsilon}_{n}
+  \end{array}\right.
+  $$
+  注意 矩阵表达 为:
+  $$
+  \mathscr A (\varepsilon_1, \varepsilon_2, \cdots , \varepsilon_n) = (\mathscr A \varepsilon_1, \mathscr A \varepsilon_2, \cdots , \mathscr A \varepsilon_n) = (\varepsilon_1, \varepsilon_2, \cdots , \varepsilon_n) A
+  $$
+  其中矩阵 $A$ 称为 $\mathscr A$ 在基下的矩阵.
+
++ 从此, 线性变换的和, 乘积等就有很好的对应, 例如:![image-20200602152921242](assets/image-20200602152921242.png)
+
+
+
++ $\star \ \star$
+
+  ![image-20200602153115738](assets/image-20200602153115738.png)
+
+  证明($\star$):
+
+  ![image-20200602153223405](assets/image-20200602153223405.png) ![image-20200602153240243](assets/image-20200602153240243.png)
+
+
+
++ ![image-20200602153554434](assets/image-20200602153554434.png)
+
+  证明:
+
+  ![image-20200602153902025](assets/image-20200602153902025.png)
+
+  这样就得到了 同一个线性变换 $\mathscr A$ 在不同基下的 矩阵之间的关系.
+
+
+
++ $\star \ \star$ 矩阵相似: $A \sim B$
+
+  ![image-20200602154126377](assets/image-20200602154126377.png)
+
+  等价关系: 满足自反, 对称, 传递 性.
+
+  
+
++ 如果两个矩阵是相似的, 那么它们可以看做同一个线性变换 在两组基下所对应的矩阵.
+
+  证明: $B = X^{-1} A X$, 令一组基为:
+  $$
+  (\eta_1, \eta_2, \cdots, \eta_n) = (\varepsilon_1, \varepsilon_2, \cdots, \varepsilon_n) X \\
+  \mathscr A (\varepsilon_1, \varepsilon_2, \cdots, \varepsilon_n) X = (\varepsilon_1, \varepsilon_2, \cdots, \varepsilon_n) A X =  (\eta_1, \eta_2, \cdots, \eta_n) B
+  $$
+  所以 $\eta$ 这组基在 $\mathscr A$ 下的矩阵就是 $B$.
+
+
+
+### § 4 特征值与特征向量
+
++ 定义:
+  $$
+  \mathscr A \boldsymbol \xi = \lambda_0 \boldsymbol \xi
+  $$
+  $k \boldsymbol \xi$ 也是特征向量, 特征值被特征向量唯一决定.
+
+
+
++ 找特征向量, 特征值的方法:
+
+  ![image-20200602161444834](assets/image-20200602161444834.png) ![image-20200602161503707](assets/image-20200602161503707.png)
+
+  上面齐次方程组有非零解的充分必要条件是系数行列式为零. 
+
+  
+
+  + $A$ 是数域 $P$ 上一 $n$ 级矩阵, $\lambda$ 是一个文字, 
+
+    $A$ 的特征多项式: 矩阵 $\lambda E - A$ 的行列式: $|\lambda \boldsymbol E - \boldsymbol A|$.
+
+    注意上面所述系数行列式为零 $\Rightarrow$ $\lambda_0$ 是 $|\lambda \boldsymbol E - \boldsymbol A| = 0$ 的一个根.
+
+  所以:
+
+  ![image-20200602162305118](assets/image-20200602162305118.png)
+
+  
+
+  
+
++ [例]
+
+  ![image-20200602162340093](assets/image-20200602162340093.png)![image-20200602162358450](assets/image-20200602162358450.png) ![image-20200602162420970](assets/image-20200602162420970.png)
+
+  
+
+  
+
++ $\text{Tr} (\boldsymbol A)$ 迹: 全体特征值的和.
+
++ 全体特征值的积为 $|A|$.
+
+
+
+### § 5 对角矩阵
+
++ $\mathscr A$ 的矩阵 在某一组基下 为对角矩阵 $\Leftrightarrow$ $\mathscr A$ 有 $n$ 个线性无关的特征向量.
+
+  证明: 这组基就是特征向量:
+
+  ![image-20200602163850713](assets/image-20200602163850713.png)
+
+  
+
++ 属于不同特征值的特征向量 线性无关:
+
+  证明: 数学归纳法:
+
+  1. 一个特征向量 线性无关;
+
+  2. 假设 $k$ 个不同特征值的特征向量 线性无关;
+
+  3. $k + 1$ 个时:
+
+     ![image-20200602164341679](assets/image-20200602164341679.png)
+
+     注意 线性无关的证明方向是第$k+1$个特征向量的系数也要为零, 还有构造两端同时作用 $\mathscr A$, 使 $\xi_{k + 1}$ 被减掉.
+
+
+
+
+
+## 第八章 $\lambda$ - 矩阵
+
+### § 1 $\lambda$ - 矩阵
 
 
 
