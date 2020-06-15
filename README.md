@@ -16,4 +16,6 @@
 
 
 
+如果您认为本仓库的一些文件侵犯了您的权益, 请 [向我发送邮件](mailto:zykhelloha@gmail.com). 我将会从仓库中彻底清除它们.
+
 star :night_with_stars:
